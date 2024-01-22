@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shimmer_example_flutter/Screens/login_screen.dart';
 
 import '../widgets/shimmer_widget.dart';
 
@@ -47,6 +48,19 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const LoginPage()),
+          );
+        },
+        backgroundColor: Colors.deepPurple.withAlpha(120),
+        foregroundColor: Colors.white,
+        elevation: 5.0,
+        tooltip: 'Refresh',
+        child: const Icon(Icons.refresh),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
       body: AnimatedBuilder(
         animation: _animationController,
         builder: (context, child) {
