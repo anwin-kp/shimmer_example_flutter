@@ -60,6 +60,7 @@ class _LoginPageState extends State<LoginPage>
                       style: TextStyle(
                         fontSize: 40.0,
                         fontWeight: FontWeight.bold,
+                        color: Colors.blueAccent,
                       ),
                     ),
                   ),
@@ -68,6 +69,7 @@ class _LoginPageState extends State<LoginPage>
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Username',
+                      labelStyle: TextStyle(color: Colors.blueAccent),
                     ),
                   ),
                   const SizedBox(height: 10.0),
@@ -76,6 +78,7 @@ class _LoginPageState extends State<LoginPage>
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
+                      labelStyle: TextStyle(color: Colors.blueAccent),
                     ),
                   ),
                   const SizedBox(height: 20.0),
@@ -88,6 +91,15 @@ class _LoginPageState extends State<LoginPage>
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.orange,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 12),
+                      textStyle: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     child: const Text('Log In'),
                   ),
